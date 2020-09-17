@@ -15,6 +15,29 @@
 # function, but it seems to be creating a variable "x" that is not reachable 
 # from the global environment, but is available in the environment of the 
 # makeCacheMatrix function
+
+
+## Execution Instructions
+## MyMatrix <- makeCacheMatrix(1:4)
+## Creates a matrix 2 x 2
+## MyMatrix$get()
+## Returns;
+##     [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4
+## CacheSolve will get the inverse via solve function;
+## > CacheSolve(MyMatrix)
+##     [,1] [,2]
+## [1,]   -2  1.5
+## [2,]    1 -0.5
+## Executing a 2nd time will get the cached inverse result;
+## getting cached data
+##     [,1] [,2]
+## [1,]   -2  1.5
+## [2,]    1 -0.5
+## Write a short comment describing this function
+## Construct a 2 x 2 matrix from numeric parameters
+
 makeCacheMatrix <- function(x = numeric()) {
         
         # holds the cached value or NULL if nothing is cached
